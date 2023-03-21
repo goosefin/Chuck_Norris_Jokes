@@ -1,5 +1,6 @@
 let button = document.querySelector('#btn')
 let title = document.querySelector('h1')
+let container = document.querySelector('.container')
 
 //fetch joke
 let joke = () =>{
@@ -10,7 +11,7 @@ let joke = () =>{
         //create new element
         let joke = document.createElement('h2')
         //append
-        document.body.appendChild(joke)
+        container.appendChild(joke)
         //inner text
         joke.innerText = data.value
     })
