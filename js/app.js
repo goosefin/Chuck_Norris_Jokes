@@ -1,6 +1,7 @@
 let button = document.querySelector('#btn')
 let title = document.querySelector('h1')
 let container = document.querySelector('.container')
+let h2 = document.querySelector('.h2')
 
 //fetch joke
 let joke = () =>{
@@ -8,12 +9,7 @@ let joke = () =>{
     //parse data
     .then((response) => response.json())
     .then((data) => {
-        //create new element
-        let joke = document.createElement('h2')
-        //append
-        container.appendChild(joke)
-        //inner text
-        joke.innerText = data.value
+        h2.innerText = data.value
     })
     
     
